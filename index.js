@@ -24,6 +24,9 @@ io.on('connection',(socket)=>{
     console.log("New Connection",socket.id);
 });
 // Routes
+app.get('/',(req,res)=>{
+    res.send("Server Running");
+});
 
 app.use('/api',UserRouter);
 // Pads
